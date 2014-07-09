@@ -1,0 +1,26 @@
+<!doctype>
+<body>
+	<h1>Task</h1>
+
+	{%for d in task%}
+	<div>
+		<div class="row">
+			<img class="profile-img"
+				src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+				alt="">
+			<div class="col-md-4">
+				<p>{{d.user_name}}</p>
+				<p>{{d.task_name}}</p>
+			</div>
+
+			<div class="col-md-5"></div>
+
+			<div class="col-md-3">
+				<p>{{d.due_date}}</p>
+				<p>{{d.task_status}}</p>
+				<p>{{d.task_accessibility}}</p>
+			</div>
+		</div>
+		{%endfor%}
+	
+</body>

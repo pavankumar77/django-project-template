@@ -1,0 +1,23 @@
+
+<head>
+<title>Rango</title>
+</head>
+
+<body>
+	<h1>Register</h1>
+
+	{% if registered %}
+	<a href="/create_tasks">Return to the homepage.</a>
+	<br /> {% else %}
+	<strong>register here!</strong>
+	<br />
+	
+	<form id="user_form" method="post" action="/registration/" enctype="multipart/form-data">
+
+		{% csrf_token %} 
+		{{ user_form.as_p }} 
+		<input type="submit" name="submit" value="registration" />
+	</form>
+	{% endif %}
+</body>
+</html>
